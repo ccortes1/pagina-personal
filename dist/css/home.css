@@ -244,13 +244,13 @@ header{
 }
 
 .servicio_marketing{
-  background-image: url(../src/images/digital-marketing.jpg);
+  background-image: url(../../src/images/digital-marketing.jpg);
   background-size: 250px 250px;
 
 }
 
 .servicios_proyectos{
-  background-image: url(../src/images/proyectos.jpg);
+  background-image: url(../../src/images/proyectos.jpg);
   background-size: 250px 250px;
 
 }
