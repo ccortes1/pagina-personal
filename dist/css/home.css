@@ -239,18 +239,18 @@ header{
 }
 
 .servicio_webdising{
-   background-image: url(../images/webdesign.jpg);
+   background-image: url(../src/images/webdesign.jpg);
    background-size: 250px 250px;
 }
 
 .servicio_marketing{
-  background-image: url(../images/digital-marketing.jpg);
+  background-image: url(../src/images/digital-marketing.jpg);
   background-size: 250px 250px;
 
 }
 
 .servicios_proyectos{
-  background-image: url(../images/proyectos.jpg);
+  background-image: url(../src/images/proyectos.jpg);
   background-size: 250px 250px;
 
 }
