@@ -1,32 +1,17 @@
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?bqb2fe');
-  src:  url('../fonts/icomoon.eot?bqb2fe#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?bqb2fe') format('truetype'),
-    url('../fonts/icomoon.woff?bqb2fe') format('woff'),
-    url('../fonts/icomoon.svg?bqb2fe#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+@import './header.css';
+@import './contacto.css';
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@custom-media --large (max-width:1029px);
+@custom-media --mediumLarge (max-width:769px);
+@custom-media --mediumSmall (max-width:481px);
+@custom-media --small (max-width:321px);
 
-.icon-menu:before {
-  content: "\e900";
-}
 
+:root{
+  --color-naranja: #EF8A5E;
+  --color-azul: #3F72AF;
+  --color-oscuro: #12151A;
+}
 
 body{
   font-family: 'Gruppo', sans-serif;
@@ -37,7 +22,7 @@ body{
 h1, h2, h3{
   font-family: 'Iceland', sans-serif;
   font-weight: 400;
-  color: #12151A;
+  color: var(--color-oscuro);
 }
 
 .hero, .container_servicios, .container_tecnologias {
@@ -53,58 +38,6 @@ h1, h2, h3{
 .wrapper_isotipo img{
   height: 80px;
   width: 150px;
-}
-
-header{
-  height: 150px;
-  background-color: rgb(18, 21, 26);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.header a{
-  text-decoration: none;
-  /* font-weight: bold; */
-  font-size: 25px;
-  letter-spacing:2px;
-  font-family: 'Iceland', sans-serif;
-
-  /* font-family: 'Gruppo', sans-serif; */
-}
-
-
-.header li{
-  display: flex;
-}
-
-.header ul{
-  display: flex;
-  padding-left: 0;
-}
-
-.menu_contactame{
-  color: #EF8A5E;
-
-}
-
-.menu_portafolio{
-  color: #3F72AF;
-  padding-left: 20px;
-
-}
-
-.menu_blog{
-  color: #3F72AF;
-  padding-left: 20px;
-}
-
-
-
-.header ol{
-  margin-top: 0;
-  margin-left: 0px;
-  list-style: none;
 }
 
 .hero{
@@ -255,88 +188,7 @@ header{
   font-size: 25px;
 }
 
-.contactame{
-  background-color: #12151A;
-  color: #F2F8FF;
-  text-align: center;
-  font-size: 25px;
-}
 
-.contactame h2{
-  padding-top: 50px;
-  color: #F2F8FF;
-}
-
-.contactame p{
-  margin-bottom: 0;
-}
-
-.redes_sociales{
-  background-color:  #12151A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-}
-
-.social-link{
-  background-size: 75px;
-  height: 75px;
-  width: 75px;
-  margin: 0 20px;
-
-}
-.github{
-  background-image: url("../images/github.svg");
-}
-
-.twitter{
-  background-image: url("../images/twitter.svg");
-}
-
-.instagram{
-  background-image: url("../images/instagram.svg");
-}
-
-.facebook{
-  background-image: url("../images/facebook.svg");
-}
-
-footer{
-  background-color: #12151A;
-}
-
-footer img{
-  height: 112.5px;
-  width: 150px;
-}
-
-.caricatura_isotipo{
-  display: flex;
-  justify-content: center;
-}
-
-.mensaje{
-  display: flex;
-  justify-content: center;
-  color: #F2F8FF;
-  font-size: 15px;
-}
-
-.burger-button{
-  display: none;
-  background-color: rgba(18 , 21, 26, 0.8);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  position: fixed;
-  z-index: 4;
-  left: 5px;
-  top: 5px;
-  color: white;
-}
 
 /* parte responsive */
 /* responsive pára pantallas aun de escritorio */
@@ -362,7 +214,7 @@ footer img{
 }
 
 
-@media screen and (max-width: 1024px){
+@media (--large){
 
 /* .hero{
   grid-template: 1fr 1fr / repeat(3,1fr)
@@ -428,12 +280,7 @@ footer img{
   padding-left: 40px;
 }
 }
-
-@media screen and (max-width: 768px) {
-
-  .wrapper_isotipo{
-    margin: 16PX 20px 16px 30px;
-  }
+@media (--mediumLarge) {
 
   .wrapper_caricatura{
     margin: 16PX 20px;
@@ -478,9 +325,7 @@ footer img{
   padding: 0;
 }
 
-.contactame{
-  padding: 0;
-}
+
   .title-tecnologias, .title_servicios{
     margin: 0;
     padding: 50px 75px 50px 100px;
@@ -489,7 +334,7 @@ footer img{
   .container_tecnologias{
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
-    justify-items: center;
+    justify-self: center;
     grid-gap: 20px 75px;
   }
   .wrapper_CSS {
@@ -531,17 +376,6 @@ footer img{
     padding: 50px 20px 0 20px;
     font-size: 30px;
   }
-  .burger-button{
-    display: flex;
-    position: relative;
-    left: 700px;
-    top: 80px;
-  }
-
-  .menu{
-    display: none;
-  }
-
 }
 
 
@@ -643,7 +477,7 @@ footer img{
 
 }
 
-@media screen and (max-width: 480px ) {
+@media (--mediumSmall ) {
 
 .wrapper_caricatura {
     display: none;
@@ -712,26 +546,6 @@ footer img{
     font-size: 20px;
     padding: 80px 40px 80px 40px;
 }
-
-.contactame h2{
-  font-size: 20px;
-}
-
-.contactame p{
-  font-size: 15px;
-}
-
-.redes_sociales{
-  height: 130px;
-}
-
-.social-link {
-    background-size: 50px;
-    height: 50px;
-    width: 50px;
-    margin: 0 15px;
-}
-
 /* .container_tecnologias{
   grid-template: repeat(4, 1fr)/ 1fr;
   grid-row-gap: 10px;
@@ -766,7 +580,7 @@ footer img{
 }
 
 
-@media screen and (max-width: 320px ) {
+@media (--small) {
 
   .menu ul{
     display: grid;
@@ -784,8 +598,30 @@ footer img{
 
   .hero{
     grid-template: 1fr 1fr/ 1fr;
+    padding: 0px 0px 0px 20px;
   }
 
+  .descripcion{
+    padding-right: 15px;
+  }
 
+  .descripcion h1{
+    padding: 0px;
+  }
 
+  .title-tecnologias{
+    font-size: 25px;
+    padding: 30px 50px 25px 50px;
+  }
+
+  .wrapper_CSS img{
+    width: 140px;
+    height: 120px;
+  }
+
+  .title_servicios{
+    padding: 20px 20px 30px 30px;
+    font-size: 30px;
+  }
+   
 }

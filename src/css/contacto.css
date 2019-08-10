@@ -1,0 +1,121 @@
+.contactame{
+  background-color: var(--color-oscuro);
+  color: #F2F8FF;
+  text-align: center;
+  font-size: 25px;
+}
+
+.contactame h2{
+  padding-top: 50px;
+  color: #F2F8FF;
+}
+
+.contactame p{
+  margin-bottom: 0;
+}
+
+.redes_sociales{
+  background-color: var(--color-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.social-link{
+  background-size: 75px;
+  height: 75px;
+  width: 75px;
+  margin: 0 20px;
+
+}
+.github{
+  background-image: url("../images/github.svg");
+}
+
+.twitter{
+  background-image: url("../images/twitter.svg");
+}
+
+.instagram{
+  background-image: url("../images/instagram.svg");
+}
+
+.facebook{
+  background-image: url("../images/facebook.svg");
+}
+
+footer{
+  background-color: var(--color-oscuro);
+}
+
+footer img{
+  height: 112.5px;
+  width: 150px;
+}
+
+.caricatura_isotipo{
+  display: flex;
+  justify-content: center;
+}
+
+.mensaje{
+  display: flex;
+  justify-content: center;
+  color: #F2F8FF;
+  font-size: 15px;
+}
+
+@media (--mediumLarge) {
+  .contactame{
+  padding: 0;
+  }
+  .contactame h2 {
+    padding: 50px 20px 0 20px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 420px ) {
+    .contactame h2{
+    font-size: 20px;
+    }
+
+    .contactame p{
+    font-size: 15px;
+    }
+
+    .redes_sociales{
+    height: 130px;
+    }
+
+    .social-link {
+        background-size: 50px;
+        height: 50px;
+        width: 50px;
+        margin: 0 15px;
+    }
+
+}
+
+@media (--small) {
+    .contactame h2{
+    font-size: 10px;
+    }
+
+    .contactame p{
+    font-size: 16px;
+    }
+
+    .redes_sociales{
+    height: 110px;
+    }
+
+    .social-link {
+        background-size: 35px;
+        height: 35px;
+        width: 35px;
+        margin: 0 15px;
+    }
+
+}

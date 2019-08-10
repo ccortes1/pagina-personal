@@ -3,7 +3,7 @@ const $descripcionDesarrolloWeb = document.getElementById('descripcionDesarrollo
 $actionWebDesing.addEventListener('click', function(){
   $descripcionDesarrolloWeb.classList.replace('servOff', 'servOn');
   $descripcionMarketing.classList.replace('servOn', 'servOff');
-$descripcionProyectos.classList.replace('servOn', 'servOff');
+  $descripcionProyectos.classList.replace('servOn', 'servOff');
 });
 
 const $actionMarketing = document.getElementById('servicio_marketing');
@@ -22,10 +22,28 @@ $actionProyectos.addEventListener('click', function(){
   $descripcionProyectos.classList.replace('servOff', 'servOn');
 });
 
+const $actionButtonMenu = document.getElementById('butonMenu');
+const $actionMenu = document.getElementById('menu');
+const $clikAncla = document.getElementById('ancla');
 
-// function replace(evento){
-//
-//   if  {
-//
-//   }
-// }
+$actionButtonMenu.addEventListener('click', function(){
+  if ($actionMenu.classList.contains('menu') ) {
+    $actionMenu.classList.replace('menu', 'menuOn');
+    
+  } else {
+    $actionMenu.classList.replace('menuOn', 'menu');
+    
+  }
+});
+
+$clikAncla.addEventListener('click', () => {
+  if ($actionMenu.classList.contains('menuOn')) {
+    $actionMenu.classList.replace('menuOn', 'menu');
+    
+
+    console.log('vamos bien');
+  } else {
+    $actionMenu.classList.replace('menu', 'menuOn')
+  }
+});
+
