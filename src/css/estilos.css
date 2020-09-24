@@ -4,15 +4,15 @@ nav a{
  
 }
 
-#contactame {
+#button-contactame {
   color:#EF8A5E;
 }
 
-#portafolio {
+#button-portafolio {
   color:#3F72AF;
 }
 
-#blog {
+#button-blog {
   color:#3F72AF;
 }
 
@@ -61,4 +61,9 @@ nav a{
 
 .instagram{
   background-image: url("../images/instagram.svg");
+}
+
+.linkedin {
+  background-image: url("../images/linkedin.png");
+}
 }
